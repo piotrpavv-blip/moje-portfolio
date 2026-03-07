@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piotr Pawłowski | AI & E-commerce Architect</title>
+    <title>Piotr Pawłowski | Specjalista ds. AI i E-commerce</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -27,7 +27,7 @@
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 
         header {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -38,9 +38,9 @@
 
         h1 { font-size: 4rem; margin: 0; font-weight: 800; letter-spacing: -2px; }
         .glitch { color: var(--primary); text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
-        .hero-desc { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 20px 0; }
+        .hero-desc { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 20px 0; }
 
-        .btn-group { display: flex; gap: 15px; margin-top: 30px; }
+        .btn-group { display: flex; gap: 15px; margin-top: 30px; flex-wrap: wrap; justify-content: center; }
         .btn {
             padding: 12px 30px;
             border-radius: 8px;
@@ -54,33 +54,30 @@
         .btn-secondary { border: 1px solid var(--text-muted); color: var(--text-main); }
         .btn-secondary:hover { background: rgba(255,255,255,0.05); }
 
-        section { padding: 100px 0; }
-        h2 { font-size: 2.5rem; margin-bottom: 50px; display: flex; align-items: center; gap: 15px; }
+        section { padding: 80px 0; }
+        h2 { font-size: 2.5rem; margin-bottom: 40px; display: flex; align-items: center; gap: 15px; }
         h2::after { content: ''; flex: 1; height: 1px; background: var(--card-bg); }
 
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .card {
             background: var(--card-bg);
             border: 1px solid rgba(255,255,255,0.05);
             padding: 40px;
             border-radius: 20px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 30px;
         }
-        .card:hover { transform: scale(1.02); border-color: var(--primary); }
-        
+
         .img-container { 
             cursor: zoom-in; 
-            overflow: hidden; 
             border-radius: 12px; 
             margin: 20px 0; 
             background: #000;
+            border: 1px solid rgba(255,255,255,0.1);
         }
-        .card img { 
-            width: 100%; 
-            display: block; 
-            transition: opacity 0.3s; 
-        }
-        .card img:hover { opacity: 0.8; }
+        .img-container img { width: 100%; display: block; transition: 0.3s; }
+        .img-container img:hover { opacity: 0.8; }
+
+        .tag-group { display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0; }
+        .tag { background: rgba(56, 189, 248, 0.1); color: var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: 600; }
 
         .timeline-item {
             padding: 30px;
@@ -88,13 +85,16 @@
             margin-left: 20px;
             position: relative;
             background: rgba(255,255,255,0.02);
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             border-radius: 0 15px 15px 0;
         }
         .timeline-item::before {
             content: ''; position: absolute; left: -9px; top: 35px;
             width: 16px; height: 16px; background: var(--primary); border-radius: 50%;
         }
+
+        .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .skill-card { background: rgba(255,255,255,0.03); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); }
 
         #modal {
             display: none;
@@ -106,9 +106,9 @@
             align-items: center;
             cursor: zoom-out;
         }
-        #modal img { max-width: 90vw; max-height: 90vh; border-radius: 10px; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
+        #modal img { max-width: 90vw; max-height: 90vh; border-radius: 10px; }
 
-        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 2.5rem; } }
+        @media (max-width: 768px) { h1 { font-size: 2.5rem; } }
     </style>
 </head>
 <body>
@@ -120,10 +120,14 @@
 <header>
     <div class="container">
         <h1>Piotr <span class="glitch">Pawłowski</span></h1>
-        <div class="subtitle" style="font-size: 1.5rem; font-weight: 300; margin-top: 10px;">AI Implementation & Operations Strategist</div>
-        <p class="hero-desc">Przekuwam złożone procesy operacyjne na inteligentne automatyzacje. 15 lat doświadczenia w zarządzaniu kryzysowym i skalowaniu e-commerce.</p>
+        <div class="subtitle" style="font-size: 1.5rem; font-weight: 300; margin-top: 10px;">
+            Strateg AI i Operacji / AI Implementation & Operations Strategist
+        </div>
+        <p class="hero-desc">Buduję przewagę rynkową poprzez inteligentną automatyzację. Łączę 15-letnie doświadczenie operacyjne z nowoczesnym wdrażaniem agentów AI i optymalizacją E-commerce.</p>
         <div class="btn-group">
-            <a href="#projects" class="btn btn-primary">Zobacz Projekty</a>
+            <a href="#about" class="btn btn-secondary">O mnie</a>
+            <a href="#projects" class="btn btn-primary">Przykładowe Projekty</a>
+            <a href="#experience" class="btn btn-secondary">Doświadczenie</a>
             <a href="https://www.linkedin.com/in/piotr-pawlowski-9208ba21a" class="btn btn-secondary" target="_blank">LinkedIn</a>
         </div>
     </div>
@@ -132,63 +136,119 @@
 <div class="container">
     <section id="about">
         <h2>O mnie</h2>
-        <div class="card" style="font-size: 1.1rem; border-left: 4px solid var(--primary);">
-            Moja kariera to droga od <strong>precyzji logistyki kolejowej</strong> do <strong>kreatywności w technologii AI</strong>. Jako Dyspozytor w ŁKA zarządzam systemami krytycznymi, gdzie błąd nie wchodzi w grę. Tę samą dbałość o detale przenoszę do świata Python i E-commerce, budując rozwiązania, które nie tylko działają, ale realnie skalują biznes.
+        <div class="card" style="font-size: 1.1rem; line-height: 1.8;">
+            <p>Moja kariera to droga od zarządzania <strong>krytycznymi systemami logistyki kolejowej</strong> do architektury nowoczesnych rozwiązań <strong>E-commerce wspieranych przez AI</strong>. Jako Dyspozytor w ŁKA codziennie podejmuję kluczowe decyzje pod presją czasu, co wykształciło we mnie analityczne podejście i dbałość o najwyższe standardy operacyjne[cite: 9, 11, 12, 13].</p>
+            
+            <p>Obecnie moją pasją i głównym obszarem działań jest <strong>rozwój sklepu emarket-automatyka.pl</strong>. Nie ograniczam się do administrowania — tworzę systemy, które ulepszają każdy aspekt sprzedaży. Wdrożyłem autorską strategię <strong>SEO i Content Marketingu</strong>, tworząc m.in. "Strefę Instalatora", co pozwoliło na 5-krotny wzrost ruchu organicznego.</p>
+            
+            <p>Moim celem jest eliminacja powtarzalnych zadań poprzez <strong>automatyzację w Pythonie</strong>. Wykorzystuję AI nie tylko do generowania treści, ale jako agentów wyszukujących ceny konkurencji czy analizujących dane, co przekłada się na realny wzrost przychodów platformy o ponad 1000% w kluczowych okresach.</p>
         </div>
     </section>
 
     <section id="projects">
-        <h2>Kluczowe Projekty</h2>
-        <div class="grid">
-            <div class="card">
-                <span style="color: var(--primary); font-weight: 800;">PROJEKT 01</span>
-                <h3>AI Market Monitor</h3>
-                <p>System w Python (Playwright) do automatycznego śledzenia cen konkurencji w czasie rzeczywistym.</p>
-                <div class="img-container" onclick="openModal('assets/img/wywołania API.webp')">
-                    <img src="assets/img/wywołania API.webp" alt="Wykres API">
-                </div>
-                <p><small>Kliknij, aby powiększyć dane wydajnościowe.</small></p>
+        <h2>Przykładowe Projekty</h2>
+        
+        <div class="card">
+            <div class="tag-group">
+                <span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">AI Monitoring</span>
             </div>
+            <h3>System Inteligentnego Monitoringu Cen</h3>
+            <p>Autorski skrypt monitorujący rynek w czasie rzeczywistym. System automatycznie analizuje oferty konkurencji, raportuje zmiany i pozwala na błyskawiczną reakcję cenową w niszowej branży automatyki do bram.</p>
+            
+            <div style="margin: 20px 0; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                <video width="100%" controls>
+                    <source src="assets/video/202603071848.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <p><strong>Dowód wydajności:</strong> Skoki wywołań API pokazują intensywną analitykę danych bez wpływu na stabilność infrastruktury sklepu.</p>
+            <div class="img-container" onclick="openModal('assets/img/wywołania API.webp')">
+                <img src="assets/img/wywołania API.webp" alt="Wykres wywołań API">
+            </div>
+        </div>
 
-            <div class="card">
-                <span style="color: var(--primary); font-weight: 800;">PROJEKT 02</span>
-                <h3>E-commerce Growth</h3>
-                <p>Skalowanie platformy automatyki budowlanej. Strategia SEO i optymalizacja ścieżki konwersji.</p>
+        <div class="card">
+            <div class="tag-group">
+                <span class="tag">Growth Hacking</span><span class="tag">Advanced SEO</span><span class="tag">E-commerce</span>
+            </div>
+            <h3>Skalowanie Platformy E-commerce</h3>
+            <p>Kompleksowa rozbudowa sklepu od podstaw. Od opracowania struktury technicznej, przez zaawansowaną optymalizację SEO, aż po budowanie autorytetu domeny poprzez specjalistyczne treści[cite: 20, 22].</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                 <div class="img-container" onclick="openModal('assets/img/Ilość zamówień.webp')">
-                    <img src="assets/img/Ilość zamówień.webp" alt="Wykres zamówień">
+                    <img src="assets/img/Ilość zamówień.webp" alt="Wzrost zamówień">
                 </div>
                 <div class="img-container" onclick="openModal('assets/img/wizyty.webp')">
-                    <img src="assets/img/wizyty.webp" alt="Wykres wizyt">
+                    <img src="assets/img/wizyty.webp" alt="Wzrost wizyt">
                 </div>
+            </div>
+            <p><em>Skuteczne skalowanie niszowego biznesu: wzrost przychodów z poziomu 2 tys. do ponad 21 tys. PLN miesięcznie.</em></p>
+        </div>
+    </section>
+
+    <section id="stack">
+        <h2>Stos Technologiczny</h2>
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h4 style="color: var(--primary); margin-top: 0;">AI & Automatyzacja</h4>
+                <p>Python (Playwright, BeautifulSoup), Prompt Engineering, Agenty AI, LLM Orchestration.</p>
+            </div>
+            <div class="skill-card">
+                <h4 style="color: var(--primary); margin-top: 0;">E-commerce</h4>
+                <p>Shoper, PrestaShop, Allegro, Zarządzanie platformami sprzedaży od podstaw[cite: 20, 22].</p>
+            </div>
+            <div class="skill-card">
+                <h4 style="color: var(--primary); margin-top: 0;">SEO & Content</h4>
+                <p>Strategia słów kluczowych, optymalizacja techniczna, tworzenie treści eksperckich, SEO Copywriting[cite: 35].</p>
+            </div>
+            <div class="skill-card">
+                <h4 style="color: var(--primary); margin-top: 0;">Infrastruktura</h4>
+                <p>Zarządzanie serwerem, monitoring wydajności, analiza danych logistycznych.</p>
             </div>
         </div>
     </section>
 
     <section id="experience">
-        <h2>Doświadczenie</h2>
+        <h2>Doświadczenie Zawodowe</h2>
         <div class="timeline-item">
             <div style="color: var(--primary); font-weight: 800;">2022 - OBECNIE</div>
-            <strong>Dyspozytor Przewozów | Łódzka Kolej Aglomeracyjna</strong>
-            <p>Koordynacja ruchu pociągów, zarządzanie kryzysowe i optymalizacja procesów logistycznych pod presją czasu.</p>
+            <strong>Dyspozytor Przewozów | Łódzka Kolej Aglomeracyjna sp. z o.o.</strong>
+            <p>Zarządzanie ruchem pociągów, koordynacja działań kryzysowych i nadzór nad realizacją planów w czasie rzeczywistym[cite: 9, 10, 11, 12].</p>
+        </div>
+        <div class="timeline-item">
+            <div style="color: var(--primary); font-weight: 800;">2021 - 2022</div>
+            <strong>Kierownik ds. Sprzedaży | MIJ SERWIS</strong>
+            <p>Zarządzanie zespołem handlowym i nadzór nad procesami magazynowymi[cite: 15, 16, 18].</p>
         </div>
         <div class="timeline-item">
             <div style="color: var(--primary); font-weight: 800;">2015 - 2021</div>
-            <strong>E-commerce Manager | NBS SYSTEM</strong>
-            <p>Budowa infrastruktury sprzedaży online, obsługa przetargów i administracja platformami Shoper/PrestaShop.</p>
+            <strong>Specjalista ds. E-commerce | NBS SYSTEM Sp. z o.o.</strong>
+            <p>Budowa i administracja sklepami internetowymi, obsługa przetargów oraz logistyka sprzedaży[cite: 19, 20, 22].</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Kluczowe Kompetencje</h2>
+        <div class="skill-grid">
+            <div class="skill-card">Zarządzanie kryzysowe i decyzyjność [cite: 7]</div>
+            <div class="skill-card">Analityka procesów biznesowych [cite: 11]</div>
+            <div class="skill-card">Budowanie relacji i obsługa strategiczna [cite: 25, 38]</div>
+            <div class="skill-card">Język angielski (Bardzo dobry w mowie i piśmie) [cite: 34]</div>
         </div>
     </section>
 
     <section id="contact" style="text-align: center;">
-        <h2>Zróbmy coś razem</h2>
-        <p>Szukasz kogoś, kto połączy świat operacji z możliwościami AI?</p>
-        <a href="mailto:piotrpaw@poczta.fm" class="btn btn-primary">Napisz do mnie</a>
-        <a href="assets/cv_piotr_pawlowski.pdf" class="btn btn-secondary" style="margin-left: 10px;">Pobierz CV</a>
+        <h2>Zróbmy coś epickiego</h2>
+        <p>Szukasz partnera, który rozumie operacje i potrafi wdrożyć nowoczesną technologię?</p>
+        <a href="mailto:piotrpaw@poczta.fm" class="btn btn-primary">Wyślij wiadomość</a>
+        <a href="assets/cv_piotr_pawlowski.pdf" class="btn btn-secondary" style="margin-left: 10px;">Pobierz CV (PDF)</a>
     </section>
 </div>
 
 <footer>
-    <div class="container" style="border-top: 1px solid var(--card-bg); padding-top: 40px; text-align: center; color: var(--text-muted);">
-        <p>© 2026 Piotr Pawłowski | Built with Python Passion & AI</p>
+    <div class="container" style="border-top: 1px solid var(--card-bg); padding-top: 40px; text-align: center; color: var(--text-muted); font-size: 0.9rem;">
+        <p>© 2026 Piotr Pawłowski | Strateg AI & Operacji | Łódź, Polska</p>
+        <p>Projekty realizowane w oparciu o pasję do danych i automatyzacji.</p>
     </div>
 </footer>
 
