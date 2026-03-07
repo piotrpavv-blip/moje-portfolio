@@ -3,127 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piotr Pawłowski | Portfolio: AI, Automation & Ops</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>Piotr Pawłowski | AI & E-commerce Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2563eb;
-            --dark: #1f2937;
-            --light: #f9fafb;
-            --text: #374151;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --primary: #38bdf8;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent: #0ea5e9;
         }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
             line-height: 1.6;
-            color: var(--text);
-            background-color: var(--light);
             margin: 0;
-            padding: 0;
+            scroll-behavior: smooth;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
         header {
-            text-align: center;
-            padding: 60px 0;
-            background: white;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            color: var(--dark);
-            font-weight: 800;
-        }
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--primary);
-            font-weight: 600;
-            margin-top: 10px;
-        }
-        .about-me {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-        .btn-group {
-            margin-top: 20px;
+            height: 100vh;
             display: flex;
-            gap: 15px;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at top right, #0c4a6e, transparent);
         }
+
+        h1 { font-size: 4rem; margin: 0; font-weight: 800; letter-spacing: -2px; }
+        .glitch { color: var(--primary); text-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
+        .hero-desc { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 20px 0; }
+
+        .btn-group { display: flex; gap: 15px; margin-top: 30px; }
         .btn {
-            padding: 10px 25px;
-            border-radius: 6px;
+            padding: 12px 30px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            transition: 0.3s;
+            transition: all 0.3s;
+            cursor: pointer;
         }
-        .btn-primary { background: var(--primary); color: white; }
-        .btn-outline { border: 2px solid var(--primary); color: var(--primary); }
-        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-primary { background: var(--primary); color: var(--bg); }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); }
+        .btn-secondary { border: 1px solid var(--text-muted); color: var(--text-main); }
+        .btn-secondary:hover { background: rgba(255,255,255,0.05); }
 
-        section { margin-bottom: 60px; }
-        h2 { border-left: 4px solid var(--primary); padding-left: 15px; color: var(--dark); margin-bottom: 30px; }
-        
+        section { padding: 100px 0; }
+        h2 { font-size: 2.5rem; margin-bottom: 50px; display: flex; align-items: center; gap: 15px; }
+        h2::after { content: ''; flex: 1; height: 1px; background: var(--card-bg); }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .card {
-            background: white;
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.05);
+            padding: 40px;
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card:hover { transform: scale(1.02); border-color: var(--primary); }
+        
+        .img-container { 
+            cursor: zoom-in; 
+            overflow: hidden; 
+            border-radius: 12px; 
+            margin: 20px 0; 
+            background: #000;
+        }
+        .card img { 
+            width: 100%; 
+            display: block; 
+            transition: opacity 0.3s; 
+        }
+        .card img:hover { opacity: 0.8; }
+
+        .timeline-item {
             padding: 30px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            border: 1px solid #e5e7eb;
-        }
-        .card img {
-            width: 100%;
-            border-radius: 8px;
-            margin: 20px 0;
-        }
-        .tag {
-            display: inline-block;
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 4px 12px;
-            border-radius: 99px;
-            font-size: 0.85rem;
-            margin-right: 8px;
-            margin-bottom: 10px;
-        }
-        .experience-item {
-            border-left: 2px solid #e5e7eb;
-            padding-left: 20px;
-            margin-bottom: 25px;
+            border-left: 2px solid var(--primary);
+            margin-left: 20px;
             position: relative;
+            background: rgba(255,255,255,0.02);
+            margin-bottom: 10px;
+            border-radius: 0 15px 15px 0;
         }
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            background: var(--primary);
-            border-radius: 50%;
+        .timeline-item::before {
+            content: ''; position: absolute; left: -9px; top: 35px;
+            width: 16px; height: 16px; background: var(--primary); border-radius: 50%;
         }
-        footer { text-align: center; padding: 40px; color: #9ca3af; font-size: 0.9rem; }
+
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+        #modal img { max-width: 90vw; max-height: 90vh; border-radius: 10px; box-shadow: 0 0 50px rgba(0,0,0,0.5); }
+
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 2.5rem; } }
     </style>
 </head>
 <body>
 
+<div id="modal" onclick="this.style.display='none'">
+    <img id="modal-img" src="" alt="Powiększenie">
+</div>
+
 <header>
     <div class="container">
-        <h1>Piotr Pawłowski</h1>
-        <div class="subtitle">E-commerce Specialist | AI & Automation Enthusiast</div>
-        <p style="max-width: 600px; margin: 20px auto;">
-            Logistyk z zawodu, pasjonat technologii z wyboru. Łączę 15-letnie doświadczenie operacyjne z nowoczesnymi rozwiązaniami AI, aby budować efektywne procesy w biznesie.
-        </p>
+        <h1>Piotr <span class="glitch">Pawłowski</span></h1>
+        <div class="subtitle" style="font-size: 1.5rem; font-weight: 300; margin-top: 10px;">AI Implementation & Operations Strategist</div>
+        <p class="hero-desc">Przekuwam złożone procesy operacyjne na inteligentne automatyzacje. 15 lat doświadczenia w zarządzaniu kryzysowym i skalowaniu e-commerce.</p>
         <div class="btn-group">
-            <a href="https://www.linkedin.com/in/piotr-pawlowski-9208ba21a/" class="btn btn-primary" target="_blank">LinkedIn</a>
-            <a href="assets/cv_piotr_pawlowski.pdf" class="btn btn-outline">Pobierz CV (PDF)</a>
+            <a href="#projects" class="btn btn-primary">Zobacz Projekty</a>
+            <a href="https://www.linkedin.com/in/piotr-pawlowski-9208ba21a" class="btn btn-secondary" target="_blank">LinkedIn</a>
         </div>
     </div>
 </header>
@@ -131,76 +132,72 @@
 <div class="container">
     <section id="about">
         <h2>O mnie</h2>
-        <div class="about-me">
-            <p>
-                Moja ścieżka zawodowa to ewolucja od ról handlowych, przez zarządzanie logistyką w transporcie kolejowym, aż po kompleksowe budowanie systemów e-commerce. Jako <strong>Dyspozytor Przewozów w ŁKA</strong> nauczyłem się podejmowania kluczowych decyzji w sytuacjach kryzysowych[cite: 9, 12]. 
-            </p>
-            <p>
-                Równolegle rozwijam projekt <strong>emarket-automatyka.pl</strong>, gdzie pełnię rolę architekta platformy. Moim obecnym celem jest pełna integracja procesów biznesowych z narzędziami <strong>AI i Python</strong>, co pozwala mi nie tylko optymalizować pracę, ale tworzyć realną przewagę konkurencyjną.
-            </p>
+        <div class="card" style="font-size: 1.1rem; border-left: 4px solid var(--primary);">
+            Moja kariera to droga od <strong>precyzji logistyki kolejowej</strong> do <strong>kreatywności w technologii AI</strong>. Jako Dyspozytor w ŁKA zarządzam systemami krytycznymi, gdzie błąd nie wchodzi w grę. Tę samą dbałość o detale przenoszę do świata Python i E-commerce, budując rozwiązania, które nie tylko działają, ale realnie skalują biznes.
         </div>
     </section>
 
     <section id="projects">
-        <h2>Kluczowe Realizacje</h2>
-        
-        <div class="card">
-            <div class="tag">Python</div><div class="tag">AI Automation</div><div class="tag">Web Scraping</div>
-            <h3>Automatyzacja Monitoringu Rynku</h3>
-            <p>Opracowałem autorski system w Pythonie (Playwright), który automatycznie monitoruje ceny konkurencji i dostępność produktów. Rozwiązanie to pozwoliło na przejście z ręcznego sprawdzania ofert na system powiadomień w czasie rzeczywistym.</p>
-            <video width="100%" controls style="border-radius: 8px;">
-                <source src="assets/video/202603071848.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div class="card">
-            <div class="tag">SEO</div><div class="tag">Content Marketing</div><div class="tag">Growth</div>
-            <h3>Skalowanie Platformy E-commerce</h3>
-            <p>Zbudowałem od podstaw strukturę sklepu w branży automatyki do bram. Dzięki wdrożeniu autorskiej strategii SEO (Strefa Instalatora) oraz optymalizacji ścieżki zakupowej, udało się osiągnąć stabilny wzrost sprzedaży i zamówień w niszowym rynku.</p>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <img src="assets/img/Ilość zamówień.webp" alt="Wzrost zamówień">
-                <img src="assets/img/wizyty.webp" alt="Statystyki wizyt">
+        <h2>Kluczowe Projekty</h2>
+        <div class="grid">
+            <div class="card">
+                <span style="color: var(--primary); font-weight: 800;">PROJEKT 01</span>
+                <h3>AI Market Monitor</h3>
+                <p>System w Python (Playwright) do automatycznego śledzenia cen konkurencji w czasie rzeczywistym.</p>
+                <div class="img-container" onclick="openModal('assets/img/wywołania API.webp')">
+                    <img src="assets/img/wywołania API.webp" alt="Wykres API">
+                </div>
+                <p><small>Kliknij, aby powiększyć dane wydajnościowe.</small></p>
             </div>
-            <p><em>Zamiast na skokowych wzrostach, skupiam się na budowaniu trwałej widoczności organicznej i zaufania klientów.</em></p>
+
+            <div class="card">
+                <span style="color: var(--primary); font-weight: 800;">PROJEKT 02</span>
+                <h3>E-commerce Growth</h3>
+                <p>Skalowanie platformy automatyki budowlanej. Strategia SEO i optymalizacja ścieżki konwersji.</p>
+                <div class="img-container" onclick="openModal('assets/img/Ilość zamówień.webp')">
+                    <img src="assets/img/Ilość zamówień.webp" alt="Wykres zamówień">
+                </div>
+                <div class="img-container" onclick="openModal('assets/img/wizyty.webp')">
+                    <img src="assets/img/wizyty.webp" alt="Wykres wizyt">
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="experience">
-        <h2>Doświadczenie Zawodowe</h2>
-        
-        <div class="experience-item">
-            <strong>Dyspozytor Przewozów</strong> | Łódzka Kolej Aglomeracyjna sp. z o.o. (2022 - obecnie)
-            <p>Nadzór nad punktualnością i realizacją planów w środowisku wysokiej odpowiedzialności[cite: 10, 11].</p>
+        <h2>Doświadczenie</h2>
+        <div class="timeline-item">
+            <div style="color: var(--primary); font-weight: 800;">2022 - OBECNIE</div>
+            <strong>Dyspozytor Przewozów | Łódzka Kolej Aglomeracyjna</strong>
+            <p>Koordynacja ruchu pociągów, zarządzanie kryzysowe i optymalizacja procesów logistycznych pod presją czasu.</p>
         </div>
-
-        <div class="experience-item">
-            <strong>Kierownik ds. Sprzedaży</strong> | MIJ SERWIS (2021 - 2022)
-            <p>Zarządzanie zespołem handlowym i gospodarką magazynową[cite: 16, 18].</p>
-        </div>
-
-        <div class="experience-item">
-            <strong>Specjalista ds. E-commerce</strong> | NBS SYSTEM Sp. z o.o. (2015 - 2021)
-            <p>Budowa sklepów (Shoper, Prestashop) i obsługa przetargów[cite: 19, 22].</p>
+        <div class="timeline-item">
+            <div style="color: var(--primary); font-weight: 800;">2015 - 2021</div>
+            <strong>E-commerce Manager | NBS SYSTEM</strong>
+            <p>Budowa infrastruktury sprzedaży online, obsługa przetargów i administracja platformami Shoper/PrestaShop.</p>
         </div>
     </section>
 
-    <section id="skills">
-        <h2>Kompetencje</h2>
-        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-            <span class="tag">Python (Playwright / BeautifulSoup)</span>
-            <span class="tag">AI Prompt Engineering</span>
-            <span class="tag">Zaawansowane SEO</span>
-            <span class="tag">E-commerce Management</span>
-            <span class="tag">Logistyka Operacyjna</span>
-            <span class="tag">Język Angielski (B2/C1)</span>
-        </div>
+    <section id="contact" style="text-align: center;">
+        <h2>Zróbmy coś razem</h2>
+        <p>Szukasz kogoś, kto połączy świat operacji z możliwościami AI?</p>
+        <a href="mailto:piotrpaw@poczta.fm" class="btn btn-primary">Napisz do mnie</a>
+        <a href="assets/cv_piotr_pawlowski.pdf" class="btn btn-secondary" style="margin-left: 10px;">Pobierz CV</a>
     </section>
 </div>
 
 <footer>
-    <p>© 2026 Piotr Pawłowski | Łódź, Polska</p>
-    <p>Zbudowano z pasją do automatyzacji.</p>
+    <div class="container" style="border-top: 1px solid var(--card-bg); padding-top: 40px; text-align: center; color: var(--text-muted);">
+        <p>© 2026 Piotr Pawłowski | Built with Python Passion & AI</p>
+    </div>
 </footer>
+
+<script>
+    function openModal(src) {
+        document.getElementById('modal-img').src = src;
+        document.getElementById('modal').style.display = 'flex';
+    }
+</script>
 
 </body>
 </html>
