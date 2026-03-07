@@ -28,7 +28,6 @@
             overflow-x: hidden;
         }
 
-        /* Efekt Spotlight podążający za myszką */
         .spotlight {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -37,7 +36,6 @@
             pointer-events: none;
         }
 
-        /* Interaktywne Menu */
         nav {
             position: fixed;
             top: 0; width: 100%;
@@ -60,14 +58,12 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-        /* Hero Section */
         header { height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; }
         .hero-label { color: var(--blue-400); font-family: monospace; font-size: 1rem; margin-bottom: 10px; display: block; }
         h1 { font-size: clamp(2.5rem, 8vw, 5rem); color: var(--slate-100); margin: 0; font-weight: 900; line-height: 1.1; }
-        h2.hero-sub { font-size: clamp(1.5rem, 4vw, 3rem); color: var(--slate-400); margin: 10px 0 30px 0; }
-        .hero-text { max-width: 550px; font-size: 1.1rem; color: var(--slate-400); margin-bottom: 40px; }
+        h2.hero-sub { font-size: clamp(1.2rem, 3vw, 2.5rem); color: var(--slate-400); margin: 10px 0 30px 0; }
+        .hero-text { max-width: 600px; font-size: 1.1rem; color: var(--slate-400); margin-bottom: 40px; }
 
-        /* Sekcje Układu */
         section { padding: 100px 0; }
         .section-title { 
             display: flex; align-items: center; gap: 20px; margin-bottom: 40px;
@@ -75,7 +71,6 @@
         }
         .section-title::after { content: ''; height: 1px; background: rgba(255,255,255,0.1); flex: 1; }
 
-        /* Projekt / Karta */
         .project-card {
             display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
             background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05);
@@ -91,20 +86,16 @@
             width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); 
             cursor: pointer; transition: 0.3s;
         }
-        .project-media img:hover { transform: scale(1.02); }
 
-        /* Stos Technologiczny Grid */
         .stack-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
         .stack-item { padding: 25px; background: rgba(255,255,255,0.02); border-radius: 8px; }
         .stack-item h4 { color: var(--blue-400); margin: 0 0 10px 0; font-size: 1.1rem; }
 
-        /* Timeline Doświadczenia */
         .exp-item { display: grid; grid-template-columns: 150px 1fr; gap: 20px; margin-bottom: 40px; }
         .exp-date { color: var(--slate-400); font-family: monospace; font-size: 0.9rem; }
         .exp-content h4 { color: var(--slate-100); margin: 0; font-size: 1.2rem; }
         .exp-content .company { color: var(--blue-400); font-weight: 500; }
 
-        /* Modal */
         #modal {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(15, 23, 42, 0.98); z-index: 1000; justify-content: center; align-items: center;
@@ -114,7 +105,7 @@
         .btn {
             display: inline-block; padding: 12px 24px; border: 1px solid var(--blue-400);
             color: var(--blue-400); border-radius: 4px; text-decoration: none;
-            font-weight: 500; transition: 0.3s; font-size: 0.9rem;
+            font-weight: 500; transition: 0.3s; font-size: 0.9rem; margin-right: 15px; margin-bottom: 10px;
         }
         .btn:hover { background: rgba(56, 189, 248, 0.1); transform: translateY(-3px); }
 
@@ -122,7 +113,7 @@
 
         @media (max-width: 768px) {
             .project-card, .exp-item { grid-template-columns: 1fr; }
-            .nav-links { display: none; } /* Uproszczenie na mobile */
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -135,7 +126,7 @@
         <a href="#" class="nav-logo">P.P.</a>
         <div class="nav-links">
             <a href="#about">O mnie</a>
-            <a href="#projects">Projekty</a>
+            <a href="#projects">Realizacje</a>
             <a href="#stack">Technologie</a>
             <a href="#experience">Doświadczenie</a>
             <a href="#contact">Kontakt</a>
@@ -150,14 +141,14 @@
 <header class="container">
     <span class="hero-label">Witaj, nazywam się</span>
     <h1>Piotr Pawłowski.</h1>
-    <h2 class="hero-sub">Strateg AI i Operacji.</h2>
+    <h2 class="hero-sub">Strateg AI i Operacji / AI & Ops Strategist.</h2>
     <p class="hero-text">
-        Specjalizuję się w budowaniu inteligentnych systemów automatyzacji, które skalują procesy biznesowe. 
-        Łączę 15 lat doświadczenia w zarządzaniu kryzysowym (ŁKA) z nowoczesnym programowaniem agentów AI.
+        Przekuwam doświadczenie w zarządzaniu systemami krytycznymi na inteligentne automatyzacje. 
+        Buduję skalowalne rozwiązania E-commerce oparte na danych i agentach AI.
     </p>
     <div>
-        <a href="#projects" class="btn">Zobacz moje realizacje</a>
-        <a href="https://www.linkedin.com/in/piotr-pawlowski-9208ba21a" target="_blank" class="btn" style="margin-left: 15px;">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/piotr-pawlowski-9208ba21a" target="_blank" class="btn">LinkedIn</a>
+        <a href="assets/cv_piotr_pawlowski.pdf" class="btn">Pobierz CV (PDF)</a>
     </div>
 </header>
 
@@ -166,13 +157,13 @@
         <div class="section-title">01. O mnie</div>
         <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 50px;">
             <div>
-                <p>Moja kariera to droga od <strong>zarządzania krytycznymi systemami logistyki kolejowej</strong> do architektury nowoczesnych rozwiązań wspieranych przez AI. Jako Dyspozytor w ŁKA wypracowałem zdolność podejmowania decyzji w milisekundach — cechę, którą dziś przekładam na tworzenie niezawodnego kodu.</p>
-                <p>W <strong>emarket-automatyka.pl</strong> pełnię rolę lidera technicznego. Nie tylko administruję sklepem, ale tworzę systemy, które „myślą” za człowieka. Wdrożyłem strategię SEO i Content Marketingu ("Strefa Instalatora"), która wygenerowała 5-krotny wzrost ruchu organicznego.</p>
-                <p>Obecnie koncentruję się na <strong>automatyzacji procesów w Pythonie</strong>. Moi agenci AI monitorują ceny konkurencji i optymalizują sprzedaż, co pozwoliło na wzrost przychodów platformy w kluczowych miesiącach.</p>
+                <p>Moja kariera to ewolucja od <strong>precyzji logistyki kolejowej</strong> do <strong>technologii AI</strong>. Jako Dyspozytor w ŁKA zarządzam systemami czasu rzeczywistego, gdzie decyzyjność i opanowanie są kluczowe[cite: 9, 11]. Tę samą dbałość o procesy przenoszę do świata programowania w Pythonie.</p>
+                <p>W projekcie <strong>emarket-automatyka.pl</strong> pełnię rolę architekta. Opracowałem strategię SEO i Content Marketingu, która zapewniła 5-krotny wzrost ruchu organicznego.</p>
+                <p>Koncentruję się na <strong>automatyzacji zadań</strong>. Moi agenci AI monitorują ceny konkurencji i optymalizują sprzedaż, co pozwoliło na wzrost przychodów platformy w kluczowych miesiącach.</p>
             </div>
-            <div style="border: 2px solid var(--blue-400); padding: 20px; border-radius: 8px; color: var(--slate-100);">
-                <h4 style="margin-top:0">W skrócie:</h4>
-                <ul style="padding-left: 20px; font-size: 0.9rem;">
+            <div style="border: 1px solid var(--blue-400); padding: 25px; border-radius: 8px; background: rgba(56, 189, 248, 0.02);">
+                <h4 style="margin-top:0; color: var(--slate-100);">Profil Ekspercki:</h4>
+                <ul style="padding-left: 20px; font-size: 0.9rem; color: var(--blue-400);">
                     <li>E-commerce Strategist</li>
                     <li>Python Automation</li>
                     <li>Operations Manager</li>
@@ -183,22 +174,25 @@
     </section>
 
     <section id="projects">
-        <div class="section-title">02. Przykładowe Projekty</div>
+        <div class="section-title">02. Przykładowe Realizacje</div>
         
         <div class="project-card">
             <div class="project-info">
-                <span style="color:var(--blue-400); font-family:monospace">Wyróżniony Projekt</span>
+                <span style="color:var(--blue-400); font-family:monospace">Automatyzacja</span>
                 <h3>AI Market Intelligence</h3>
-                <p>Autorski system monitoringu konkurencji w czasie rzeczywistym. Wykorzystuje Python i Playwright do analizy trendów cenowych, co pozwoliło na błyskawiczną reakcję rynkową i wzrost wolumenu zamówień.</p>
+                <p>System monitoringu konkurencji (Python + Playwright). Skrypt automatycznie analizuje oferty, co umożliwia błyskawiczną reakcję cenową i optymalizację sprzedaży.</p>
                 <div class="project-tags">
-                    <span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">Agent AI</span><span class="tag">Analytics</span>
+                    <span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">AI Monitoring</span>
+                </div>
+                <div style="margin-top:20px">
+                    <img src="assets/img/wywołania API.webp" onclick="openModal('assets/img/wywołania API.webp')" style="border-radius:8px; border:1px solid rgba(255,255,255,0.1);">
                 </div>
             </div>
             <div class="project-media">
                 <video controls>
                     <source src="assets/video/202603071848.mp4" type="video/mp4">
                 </video>
-                <img src="assets/img/wywołania API.webp" onclick="openModal('assets/img/wywołania API.webp')" style="margin-top:15px">
+                <p style="font-size:0.8rem; text-align:center; margin-top:10px">Demostracja działania bota w czasie rzeczywistym.</p>
             </div>
         </div>
 
@@ -209,10 +203,10 @@
             </div>
             <div class="project-info">
                 <span style="color:var(--blue-400); font-family:monospace">E-commerce Growth</span>
-                <h3>Skalowanie Platformy B2B/B2C</h3>
-                <p>Transformacja niszowego sklepu automatyki do bram w lidera widoczności organicznej. Wzrost przychodów z 2 tys. do 21 tys. PLN miesięcznie dzięki optymalizacji SEO i automatyzacji bazy produktów.</p>
+                <h3>Skalowanie Platformy Sprzedażowej</h3>
+                <p>Transformacja niszowego sklepu w lidera widoczności. Wzrost miesięcznych przychodów z poziomu 2 tys. do ponad 21 tys. PLN poprzez zaawansowane SEO i content engineering.</p>
                 <div class="project-tags">
-                    <span class="tag">SEO</span><span class="tag">Content Engineering</span><span class="tag">Growth Hacking</span>
+                    <span class="tag">SEO</span><span class="tag">Growth Hacking</span><span class="tag">E-com Architecture</span>
                 </div>
             </div>
         </div>
@@ -223,78 +217,72 @@
         <div class="stack-grid">
             <div class="stack-item">
                 <h4>AI & Automation</h4>
-                <p>Python, Playwright, BeautifulSoup, Agenty AI (Custom LLM), Prompt Engineering.</p>
+                <p>Python (Playwright, BeautifulSoup), Prompt Engineering, Agenty AI, LLM Orchestration.</p>
             </div>
             <div class="stack-item">
-                <h4>E-commerce Tools</h4>
-                <p>Shoper, PrestaShop, Allegro, narzędzia analityczne (Ahrefs, Semstorm).</p>
+                <h4>E-commerce Ecosystem</h4>
+                <p>Shoper, PrestaShop, Allegro, narzędzia analityczne (Ahrefs, Semstorm)[cite: 20, 35].</p>
             </div>
             <div class="stack-item">
-                <h4>Operations</h4>
-                <p>Zarządzanie kryzysowe, monitoring wydajności (Real-time), analiza danych logistycznych[cite: 14].</p>
+                <h4>Operations & Ops</h4>
+                <p>Zarządzanie kryzysowe, monitoring wydajności, analiza danych logistycznych[cite: 11, 14, 28].</p>
             </div>
         </div>
     </section>
 
     <section id="experience">
         <div class="section-title">04. Doświadczenie</div>
-        
         <div class="exp-item">
             <div class="exp-date">2022 — Obecnie</div>
             <div class="exp-content">
                 <h4>Dyspozytor Przewozów · <span class="company">ŁKA sp. z o.o.</span></h4>
-                <p>Nadzór nad realizacją planów w czasie rzeczywistym. Zarządzanie kryzysowe i koordynacja bezpieczeństwa tysięcy pasażerów[cite: 11].</p>
+                <p>Nadzór nad punktualnością pociągów i realizacją planu obiegów w środowisku wysokiej odpowiedzialności[cite: 9, 10, 11].</p>
             </div>
         </div>
-
         <div class="exp-item">
             <div class="exp-date">2021 — 2022</div>
             <div class="exp-content">
                 <h4>Kierownik ds. Sprzedaży · <span class="company">MIJ SERWIS</span></h4>
-                <p>Optymalizacja procesów magazynowych i zarządzanie operacyjne zespołem handlowym[cite: 18].</p>
+                <p>Zarządzanie zespołem handlowym i optymalizacja procesów magazynowych[cite: 15, 18].</p>
             </div>
         </div>
-
         <div class="exp-item">
             <div class="exp-date">2015 — 2021</div>
             <div class="exp-content">
                 <h4>Specjalista ds. E-commerce · <span class="company">NBS SYSTEM</span></h4>
-                <p>Budowa infrastruktury sprzedaży online od podstaw. Zarządzanie przetargami i logistyka międzynarodowa[cite: 22].</p>
+                <p>Budowa i obsługa sklepów internetowych oraz zarządzanie logistyką przetargową[cite: 19, 20, 22].</p>
             </div>
         </div>
     </section>
 
     <section id="contact" style="text-align:center;">
         <div class="section-title">05. Kontakt</div>
-        <h3>Budujmy przyszłość automatyzacji.</h3>
+        <h3>Zróbmy coś wartościowego.</h3>
         <p style="max-width: 500px; margin: 0 auto 30px auto; color: var(--slate-400);">
-            Obecnie szukam nowych wyzwań w obszarze wdrażania AI i optymalizacji operacji. Jeśli masz projekt, który potrzebuje technicznego spojrzenia — napisz do mnie.
+            Poszukuję wyzwań, które pozwolą mi wykorzystać synergię logistyki i sztucznej inteligencji. Jeśli widzisz potencjał do współpracy — napisz.
         </p>
         <a href="mailto:piotrpaw@poczta.fm" class="btn">Napisz Wiadomość</a>
-        <a href="assets/cv_piotr_pawlowski.pdf" class="btn" style="margin-left: 15px;">Pobierz CV (PDF)</a>
-    </section>
-</div>
+        <a href="https://www.linkedin.com/in/piotr-pawlowski-9208ba21a" target="_blank" class="btn">LinkedIn</a>
+    </div>
+</header>
 
 <footer>
-    <p>Zaprojektowano i zakodowano przez Piotra Pawłowskiego · 2026</p>
-    <p>Built with Inter & Blue Glow Effect</p>
+    <p>© 2026 Piotr Pawłowski · Strateg AI & Operacji</p>
+    <p>Minimalist Design with Spotlight Effect</p>
 </footer>
 
 <script>
-    // Spotlight Effect
     const spotlight = document.querySelector('.spotlight');
     window.addEventListener('mousemove', e => {
         spotlight.style.setProperty('--x', e.clientX + 'px');
         spotlight.style.setProperty('--y', e.clientY + 'px');
     });
 
-    // Modal
     function openModal(src) {
         document.getElementById('modal-img').src = src;
         document.getElementById('modal').style.display = 'flex';
     }
 
-    // Active link highlighting
     const sections = document.querySelectorAll("section");
     const navLi = document.querySelectorAll(".nav-links a");
     window.addEventListener("scroll", () => {
