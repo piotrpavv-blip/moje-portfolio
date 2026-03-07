@@ -3,42 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piotr Pawłowski | AI & Ops Architect</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> </head>
+    <title>Piotr Pawłowski | Portfolio: AI, Automation & Ops</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1f2937;
+            --light: #f9fafb;
+            --text: #374151;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--dark);
+            font-weight: 800;
+        }
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .about-me {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        .btn-group {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        .btn {
+            padding: 10px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-primary { background: var(--primary); color: white; }
+        .btn-outline { border: 2px solid var(--primary); color: var(--primary); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        section { margin-bottom: 60px; }
+        h2 { border-left: 4px solid var(--primary); padding-left: 15px; color: var(--dark); margin-bottom: 30px; }
+        
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid #e5e7eb;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 10px;
+        }
+        .experience-item {
+            border-left: 2px solid #e5e7eb;
+            padding-left: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+        footer { text-align: center; padding: 40px; color: #9ca3af; font-size: 0.9rem; }
+    </style>
+</head>
 <body>
-    <header>
+
+<header>
+    <div class="container">
         <h1>Piotr Pawłowski</h1>
-        <p><strong>AI Implementation & E-commerce Growth Architect</strong></p>
-        <p>Łączę precyzję logistyki kolejowej z automatyzacją AI. W 3 miesiące zwiększyłem przychody platformy o 1000%.</p>
-    </header>
+        <div class="subtitle">E-commerce Specialist | AI & Automation Enthusiast</div>
+        <p style="max-width: 600px; margin: 20px auto;">
+            Logistyk z zawodu, pasjonat technologii z wyboru. Łączę 15-letnie doświadczenie operacyjne z nowoczesnymi rozwiązaniami AI, aby budować efektywne procesy w biznesie.
+        </p>
+        <div class="btn-group">
+            <a href="https://www.linkedin.com/in/TWOJ-PROFIL" class="btn btn-primary" target="_blank">LinkedIn</a>
+            <a href="assets/cv_piotr_pawlowski.pdf" class="btn btn-outline">Pobierz CV (PDF)</a>
+        </div>
+    </div>
+</header>
 
-    <section id="ecommerce">
-        <h2>🚀 E-commerce Growth: emarket-automatyka.pl</h2>
-        <p>Skalowanie sprzedaży od 2 000 PLN do 21 000 PLN miesięcznie.</p>
-        <img src="assets/img/Ilość zamówień.webp" alt="Wykres zamówień">
-        <p><em>Źródło: Raport sprzedaży 2025/2026. Odnotowano 520% wzrostu liczby zamówień.</em></p>
-        <img src="assets/img/wizyty.webp" alt="Wykres wizyt">
-        <p><em>Efekt strategii SEO i Content Marketingu: 5-krotny wzrost ruchu organicznego.</em></p>
+<div class="container">
+    <section id="about">
+        <h2>O mnie</h2>
+        <div class="about-me">
+            <p>
+                Moja ścieżka zawodowa to ewolucja od ról handlowych, przez zarządzanie logistyką w transporcie kolejowym, aż po kompleksowe budowanie systemów e-commerce. Jako <strong>Dyspozytor Przewozów w ŁKA</strong> nauczyłem się podejmowania kluczowych decyzji w sytuacjach kryzysowych[cite: 9, 12]. 
+            </p>
+            <p>
+                Równolegle rozwijam projekt <strong>emarket-automatyka.pl</strong>, gdzie pełnię rolę architekta platformy. Moim obecnym celem jest pełna integracja procesów biznesowych z narzędziami <strong>AI i Python</strong>, co pozwala mi nie tylko optymalizować pracę, ale tworzyć realną przewagę konkurencyjną.
+            </p>
+        </div>
     </section>
 
-    <section id="ai-python">
-        <h2>🤖 AI & Python Lab</h2>
-        <p>Autorski system monitoringu cen konkurencji zbudowany w Python (Playwright).</p>
-        <video width="100%" controls>
-            <source src="assets/video/202603071848.mp4" type="video/mp4">
-            Twoja przeglądarka nie obsługuje wideo.
-        </video>
-        <p>System automatycznie analizuje oferty, kategoryzuje produkty i raportuje odchylenia cenowe w czasie rzeczywistym.</p>
+    <section id="projects">
+        <h2>Kluczowe Realizacje</h2>
+        
+        <div class="card">
+            <div class="tag">Python</div><div class="tag">AI Automation</div><div class="tag">Web Scraping</div>
+            <h3>Automatyzacja Monitoringu Rynku</h3>
+            <p>Opracowałem autorski system w Pythonie (Playwright), który automatycznie monitoruje ceny konkurencji i dostępność produktów. Rozwiązanie to pozwoliło na przejście z ręcznego sprawdzania ofert na system powiadomień w czasie rzeczywistym.</p>
+            <video width="100%" controls style="border-radius: 8px;">
+                <source src="assets/video/202603071848.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="card">
+            <div class="tag">SEO</div><div class="tag">Content Marketing</div><div class="tag">Growth</div>
+            <h3>Skalowanie Platformy E-commerce</h3>
+            <p>Zbudowałem od podstaw strukturę sklepu w branży automatyki do bram. Dzięki wdrożeniu autorskiej strategii SEO (Strefa Instalatora) oraz optymalizacji ścieżki zakupowej, udało się osiągnąć stabilny wzrost sprzedaży i zamówień w niszowym rynku.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                <img src="assets/img/Ilość zamówień.webp" alt="Wzrost zamówień">
+                <img src="assets/img/wizyty.webp" alt="Statystyki wizyt">
+            </div>
+            <p><em>Zamiast na skokowych wzrostach, skupiam się na budowaniu trwałej widoczności organicznej i zaufania klientów.</em></p>
+        </div>
     </section>
 
-    <section id="logistics">
-        <h2>🚉 Operations & Logistics (ŁKA)</h2>
-        <p>Zarządzanie kryzysowe i nadzór nad ruchem pociągów. Odpowiedzialność za systemy o najwyższym priorytecie bezpieczeństwa.</p>
+    <section id="experience">
+        <h2>Doświadczenie Zawodowe</h2>
+        
+        <div class="experience-item">
+            <strong>Dyspozytor Przewozów</strong> | Łódzka Kolej Aglomeracyjna sp. z o.o. (2022 - obecnie)
+            <p>Nadzór nad punktualnością i realizacją planów w środowisku wysokiej odpowiedzialności[cite: 10, 11].</p>
+        </div>
+
+        <div class="experience-item">
+            <strong>Kierownik ds. Sprzedaży</strong> | MIJ SERWIS (2021 - 2022)
+            <p>Zarządzanie zespołem handlowym i gospodarką magazynową[cite: 16, 18].</p>
+        </div>
+
+        <div class="experience-item">
+            <strong>Specjalista ds. E-commerce</strong> | NBS SYSTEM Sp. z o.o. (2015 - 2021)
+            <p>Budowa sklepów (Shoper, Prestashop) i obsługa przetargów[cite: 19, 22].</p>
+        </div>
     </section>
 
-    <footer>
-        <p>Kontakt: piotrpaw@poczta.fm | Tel: 535 349 372</p>
-        <p>© 2026 Piotr Pawłowski. Wszystkie prawa zastrzeżone.</p>
-    </footer>
+    <section id="skills">
+        <h2>Kompetencje</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <span class="tag">Python (Playwright / BeautifulSoup)</span>
+            <span class="tag">AI Prompt Engineering</span>
+            <span class="tag">Zaawansowane SEO</span>
+            <span class="tag">E-commerce Management</span>
+            <span class="tag">Logistyka Operacyjna</span>
+            <span class="tag">Język Angielski (B2/C1)</span>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>© 2026 Piotr Pawłowski | Łódź, Polska</p>
+    <p>Zbudowano z pasją do automatyzacji.</p>
+</footer>
+
 </body>
 </html>
